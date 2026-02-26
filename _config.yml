@@ -14,9 +14,9 @@
 # + 💬 Wechat: Joeqqqqqqq
 # + 📱 Phone: +86 18888178182
 # Site Settings
-title                    : "Qiao's Home Page"
-description              : "My girlfriend and I have a cute cat 🐱 named Yuanbao (元宝)."
-repository               : "qianqiaoai/qianqiaoai.github.io"
+title                    : "Zhou's Home Page"
+description              : "zzz."
+repository               : "menlanzzz/manlenzzz.github.io"
 google_scholar_stats_use_cdn : False
 
 # google analytics
@@ -29,14 +29,14 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Qian Qiao"
+  name             : "Zhou Changhai"
   avatar           : "images/me_cat.png"
-  bio              : "Independent Researcher"
+  bio              : "PhD Candidate, Fudan University"
   location         : "Shanghai, China"
   employer         :
   pubmed           : 
   googlescholar    : "xxxx"
-  email            : "joeqian@aliyun.com"
+  email            : "zhouch23@m.fudan.edu.cn"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
