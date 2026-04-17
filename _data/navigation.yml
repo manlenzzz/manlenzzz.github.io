@@ -1,0 +1,18 @@
+main:
+  - title: "About"
+    url: "#about"
+
+  - title: "Research"
+    url: "#research"
+
+  - title: "Selected"
+    url: "#selected-publications"
+
+  - title: "Publications"
+    url: "#full-publications"
+
+  - title: "CV"
+    url: "#cv"
+
+  - title: "Contact"
+    url: "#contact"

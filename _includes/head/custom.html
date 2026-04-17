@@ -1,0 +1,48 @@
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png' | relative_url }}">
+<meta name="theme-color" content="#ffffff">
+
+<script>
+  (function () {
+    var storageKey = 'cz-homepage-lang';
+
+    function setRootLanguage(lang) {
+      document.documentElement.setAttribute('data-site-lang', lang);
+    }
+
+    try {
+      setRootLanguage(localStorage.getItem(storageKey) || 'en');
+    } catch (error) {
+      setRootLanguage('en');
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var buttons = document.querySelectorAll('[data-language-button]');
+      if (!buttons.length) {
+        return;
+      }
+
+      function applyLanguage(lang) {
+        setRootLanguage(lang);
+        buttons.forEach(function (button) {
+          var active = button.getAttribute('data-language-button') === lang;
+          button.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        try {
+          localStorage.setItem(storageKey, lang);
+        } catch (error) {
+          // Ignore storage failures.
+        }
+      }
+
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          applyLanguage(button.getAttribute('data-language-button'));
+        });
+      });
+
+      applyLanguage(document.documentElement.getAttribute('data-site-lang') || 'en');
+    });
+  })();
+</script>

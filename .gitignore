@@ -1,0 +1,10 @@
+_site/
+.bundle/
+.jekyll-cache/
+.sass-cache/
+/vendor/
+node_modules/
+/assets/js/vendor/
+__pycache__/
+tests/__pycache__/
+.DS_Store
