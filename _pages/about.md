@@ -28,18 +28,17 @@ redirect_from:
 
       <p class="hero-lead" data-lang="en">
         I am a PhD candidate at Fudan University working on efficient and deployable large language models,
-        with current interests in structured compression, parameter-efficient adaptation, and adaptive inference.
+        with current interests in model compression, parameter-efficient adaptation, model serving, and adaptive inference.
       </p>
       <p class="hero-lead" data-lang="zh">
-        我是复旦大学博士生，主要研究高效且可部署的大语言模型，当前关注结构化压缩、参数高效适配，以及自适应推理。
+        我是复旦大学博士生，主要研究高效且可部署的大语言模型，当前关注模型压缩、参数高效适配、模型服务，以及自适应推理。
       </p>
 
       <p class="hero-note" data-lang="en">
-        A recurring theme in my work is simple: efficiency methods should translate into real memory savings and real inference benefits,
-        not only cleaner sparsity numbers in a figure.
+        My recent work focuses on making large models cheaper to train, tune, serve, and deploy under real memory and latency constraints.
       </p>
       <p class="hero-note" data-lang="zh">
-        我的一条持续研究主线很直接：高效化方法应该真正带来显存节省和推理收益，而不只是停留在图表里好看的稀疏指标。
+        我近期的工作主要围绕如何在真实显存和时延约束下，让大模型的训练、微调、服务和部署都更高效。
       </p>
 
       <div class="hero-actions">
@@ -56,8 +55,8 @@ redirect_from:
         <div class="meta-card">
           <span data-lang="en">Focus</span>
           <span data-lang="zh">方向</span>
-          <strong data-lang="en">LLM compression, PEFT, adaptive inference</strong>
-          <strong data-lang="zh">大模型压缩、参数高效微调、自适应推理</strong>
+          <strong data-lang="en">LLM compression, PEFT, model serving, adaptive inference</strong>
+          <strong data-lang="zh">大模型压缩、参数高效微调、模型服务、自适应推理</strong>
         </div>
         <div class="meta-card">
           <span data-lang="en">Affiliation</span>
@@ -82,14 +81,14 @@ redirect_from:
     <div class="section-heading">
       <p class="section-kicker" data-lang="en">Research</p>
       <p class="section-kicker" data-lang="zh">研究方向</p>
-      <h2 data-lang="en">Efficient large models for real systems.</h2>
-      <h2 data-lang="zh">面向真实系统的大模型高效化。</h2>
+      <h2 data-lang="en">Efficient large models for training, serving, and deployment.</h2>
+      <h2 data-lang="zh">面向训练、服务与部署的大模型高效化。</h2>
       <p data-lang="en">
-        My recent work lies at the intersection of compression, efficient adaptation, and budget-aware inference for large language models.
-        I am particularly interested in methods that co-design these components instead of optimizing them in isolation.
+        My recent work lies at the intersection of compression, efficient adaptation, serving systems, and budget-aware inference for large language models.
+        I am particularly interested in methods that optimize the full deployment pipeline rather than a single isolated module.
       </p>
       <p data-lang="zh">
-        我近期的工作位于大语言模型压缩、高效适配和预算感知推理的交叉点，尤其关注把这些模块联合起来设计，而不是彼此割裂地分别优化。
+        我近期的工作位于大语言模型压缩、高效适配、服务系统和预算感知推理的交叉点，尤其关注从整体部署链路出发，而不是只优化某个孤立模块的方法设计。
       </p>
     </div>
 
@@ -98,10 +97,10 @@ redirect_from:
         <h3 data-lang="en">Compression With Real Memory Gains</h3>
         <h3 data-lang="zh">真正带来内存收益的压缩</h3>
         <p data-lang="en">
-          I study structured pruning and quantization strategies that can reduce actual memory cost while keeping downstream quality as stable as possible.
+          I study structured pruning and quantization strategies that reduce actual memory cost while preserving model quality as much as possible.
         </p>
         <p data-lang="zh">
-          我关注能够真正降低内存开销的结构化剪枝与量化方法，同时尽可能保持下游任务性能稳定。
+          我关注能够真正降低内存开销的结构化剪枝与量化方法，同时尽可能保持模型性能稳定。
         </p>
       </article>
 
@@ -109,21 +108,21 @@ redirect_from:
         <h3 data-lang="en">Efficient Adaptation After Compression</h3>
         <h3 data-lang="zh">压缩后的高效适配</h3>
         <p data-lang="en">
-          A second line of work explores low-rank adaptation, mixed precision, and layer-wise allocation so compressed models can still be tuned effectively.
+          A second line of work explores low-rank adaptation, mixed precision, and hierarchical allocation so compressed models can still be tuned efficiently.
         </p>
         <p data-lang="zh">
-          第二条主线聚焦低秩适配、混合精度和层级分配，使压缩后的模型依然能够被高效而稳定地微调。
+          第二条主线聚焦低秩适配、混合精度和分层分配，使压缩后的模型依然能够被高效而稳定地微调。
         </p>
       </article>
 
       <article class="research-card">
-        <h3 data-lang="en">Budget-Aware Inference</h3>
-        <h3 data-lang="zh">预算感知推理</h3>
+        <h3 data-lang="en">Serving and Adaptive Inference</h3>
+        <h3 data-lang="zh">服务与自适应推理</h3>
         <p data-lang="en">
-          I am also interested in dynamic sparsity and adaptive computation methods that better trade off inference efficiency and model quality under practical budgets.
+          I am also interested in multi-tenant serving, dynamic operator selection, and adaptive routing under practical latency and budget constraints.
         </p>
         <p data-lang="zh">
-          我也关注动态稀疏与自适应计算，希望在实际预算约束下更好地平衡推理效率与模型效果。
+          我也关注多租户服务、动态算子选择，以及在实际时延和预算约束下的自适应路由与推理。
         </p>
       </article>
     </div>
@@ -133,26 +132,33 @@ redirect_from:
     <div class="section-heading">
       <p class="section-kicker" data-lang="en">Selected Publications</p>
       <p class="section-kicker" data-lang="zh">代表性论文</p>
-      <h2 data-lang="en">A recent research line from compression to efficient adaptation.</h2>
-      <h2 data-lang="zh">从模型压缩延伸到高效适配的一条近期研究线索。</h2>
-      <p data-lang="en">
-        The papers below reflect my recent focus on large language model efficiency, especially the connection between structured compression,
-        post-compression adaptation, and practical deployment constraints.
-      </p>
-      <p data-lang="zh">
-        下面这些工作集中体现了我近期围绕大语言模型高效化的研究，尤其关注结构化压缩、压缩后适配与真实部署约束之间的联系。
-      </p>
+      <h2 data-lang="en">Representative work on efficient LLMs, model serving, and adaptive inference.</h2>
+      <h2 data-lang="zh">围绕高效大模型、模型服务与自适应推理的代表性工作。</h2>
     </div>
 
     <div class="publication-grid">
       <article class="pub-card pub-card--featured">
         <div class="pub-card-top">
-          <span class="pub-venue">ICLR 2026</span>
-          <span class="pub-year">2026</span>
+          <span class="pub-venue" data-lang="en">AAAI / CCF-A</span>
+          <span class="pub-venue" data-lang="zh">AAAI / CCF-A</span>
+          <span class="pub-year" data-lang="en">First author + independent corresponding author</span>
+          <span class="pub-year" data-lang="zh">一作+独立通讯</span>
+        </div>
+        <h3>Dynamic Operator Optimization for Efficient Multi-Tenant LoRA Model Serving</h3>
+        <p data-lang="en">Dynamic operator selection and scheduling for multi-tenant LoRA serving, improving online throughput while reducing service latency.</p>
+        <p data-lang="zh">面向多租户 LoRA 服务，提出动态算子选择与调度方法，提升在线推理吞吐并降低服务时延。</p>
+      </article>
+
+      <article class="pub-card">
+        <div class="pub-card-top">
+          <span class="pub-venue" data-lang="en">ICLR / CCF-A</span>
+          <span class="pub-venue" data-lang="zh">ICLR / CCF-A</span>
+          <span class="pub-year" data-lang="en">First author</span>
+          <span class="pub-year" data-lang="zh">一作</span>
         </div>
         <h3>Large Language Model Compression with Global Rank and Sparsity Optimization</h3>
-        <p data-lang="en">A unified view of rank allocation and sparsity budgeting for compressing large language models under practical resource constraints.</p>
-        <p data-lang="zh">从统一视角联合考虑秩分配与稀疏预算，在实际资源约束下进行大语言模型压缩。</p>
+        <p data-lang="en">A two-stage compression framework that jointly optimizes low-rank and sparse components across layers to better preserve performance under stronger compression.</p>
+        <p data-lang="zh">提出两阶段的 LLM 压缩方法，在全局范围联合优化各层的低秩组件和稀疏组件，更好处理低秩与稀疏的相互作用，从而在更强压缩下尽量保住模型性能。</p>
         <div class="pub-links">
           <a href="https://arxiv.org/abs/2505.03801" target="_blank" rel="noopener">arXiv</a>
         </div>
@@ -160,12 +166,26 @@ redirect_from:
 
       <article class="pub-card">
         <div class="pub-card-top">
-          <span class="pub-venue">NAACL 2025</span>
-          <span class="pub-year">2025</span>
+          <span class="pub-venue" data-lang="en">NAACL / CCF-B</span>
+          <span class="pub-venue" data-lang="zh">NAACL / CCF-B</span>
+          <span class="pub-year" data-lang="en">First author</span>
+          <span class="pub-year" data-lang="zh">一作</span>
+        </div>
+        <h3>RankAdaptor: Hierarchical Dynamic Low-Rank Adaptation for Structural Pruned LLMs</h3>
+        <p data-lang="en">Hierarchical rank allocation and performance modeling for structurally pruned LLMs, enabling more efficient low-rank fine-tuning.</p>
+        <p data-lang="zh">针对结构化剪枝 LLM，提出分层 rank 分配与性能建模方法，实现更高效的低秩微调。</p>
+      </article>
+
+      <article class="pub-card">
+        <div class="pub-card-top">
+          <span class="pub-venue" data-lang="en">NAACL / CCF-B</span>
+          <span class="pub-venue" data-lang="zh">NAACL / CCF-B</span>
+          <span class="pub-year" data-lang="en">First author</span>
+          <span class="pub-year" data-lang="zh">一作</span>
         </div>
         <h3>QPruner: Probabilistic Decision Quantization for Structured Pruning in Large Language Models</h3>
-        <p data-lang="en">Explores structured pruning decisions through probabilistic quantization for deployment-oriented large language model compression.</p>
-        <p data-lang="zh">通过概率量化建模结构化剪枝决策，面向实际部署场景探索大语言模型压缩方法。</p>
+        <p data-lang="en">A probabilistic decision quantization strategy for structured pruning that improves the balance between compression ratio and model accuracy.</p>
+        <p data-lang="zh">提出面向结构化剪枝模型的概率决策量化策略，在压缩率与模型精度之间取得更优平衡。</p>
         <div class="pub-links">
           <a href="https://arxiv.org/abs/2412.11629" target="_blank" rel="noopener">arXiv</a>
         </div>
@@ -173,104 +193,122 @@ redirect_from:
 
       <article class="pub-card">
         <div class="pub-card-top">
-          <span class="pub-venue">Information Processing &amp; Management</span>
-          <span class="pub-year">2026</span>
-        </div>
-        <h3>LaRA: Layer-wise rank allocation for efficient fine-tuning of pruned large language models</h3>
-        <p data-lang="en">Shows how pruning and adaptation can be better co-designed through layer-wise rank allocation after compression.</p>
-        <p data-lang="zh">通过层级秩分配把剪枝与后续适配更紧密地结合起来，提升压缩后模型的微调效率。</p>
-      </article>
-
-      <article class="pub-card">
-        <div class="pub-card-top">
-          <span class="pub-venue">arXiv</span>
-          <span class="pub-year">2026</span>
-        </div>
-        <h3>AutoQRA: Joint Optimization of Mixed-Precision Quantization and Low-rank Adapters for Efficient LLM Fine-Tuning</h3>
-        <p data-lang="en">Unifies mixed-precision quantization and low-rank adapters in a single optimization framework for efficient fine-tuning.</p>
-        <p data-lang="zh">将混合精度量化与低秩适配器纳入同一个优化框架，提升大模型高效微调能力。</p>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2602.22268" target="_blank" rel="noopener">arXiv</a>
-        </div>
-      </article>
-
-      <article class="pub-card">
-        <div class="pub-card-top">
-          <span class="pub-venue">arXiv</span>
-          <span class="pub-year">2026</span>
+          <span class="pub-venue" data-lang="en">ACL 2026 / CCF-A</span>
+          <span class="pub-venue" data-lang="zh">ACL2026 / CCF-A</span>
+          <span class="pub-year" data-lang="en">First author</span>
+          <span class="pub-year" data-lang="zh">一作</span>
         </div>
         <h3>Balancing Fidelity and Plasticity: Aligning Mixed-Precision Fine-Tuning with Linguistic Hierarchies</h3>
-        <p data-lang="en">Studies how mixed-precision fine-tuning can better preserve model fidelity while retaining adaptation flexibility.</p>
-        <p data-lang="zh">研究混合精度微调如何在保持模型原有能力的同时维持足够的适配灵活性。</p>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2505.03802" target="_blank" rel="noopener">arXiv</a>
-        </div>
+        <p data-lang="en">Introduces QR-Adaptor, which jointly allocates quantization bitwidths and LoRA ranks by linguistic hierarchy to approach 16-bit fine-tuning under a 4-bit budget.</p>
+        <p data-lang="zh">提出 QR-Adaptor，从语言层级出发联合分配各层量化比特宽度与 LoRA 秩，在有限显存下协调冻结权重保真度与任务适应性，使 4-bit 预算下的微调效果接近 16-bit 基线。</p>
       </article>
 
       <article class="pub-card">
         <div class="pub-card-top">
-          <span class="pub-venue">ICML 2025</span>
-          <span class="pub-year">2025</span>
+          <span class="pub-venue" data-lang="en">ACL 2026 / CCF-A</span>
+          <span class="pub-venue" data-lang="zh">ACL2026 / CCF-A</span>
+          <span class="pub-year" data-lang="en">Co-first author</span>
+          <span class="pub-year" data-lang="zh">共一</span>
         </div>
-        <h3>BSLoRA: Enhancing the Parameter Efficiency of LoRA with Intra-Layer and Inter-Layer Sharing</h3>
-        <p data-lang="en">Further reduces LoRA overhead by introducing sharing mechanisms across and within layers.</p>
-        <p data-lang="zh">通过层内与层间共享机制进一步降低 LoRA 的参数与计算开销。</p>
+        <h3>Deputy: Accelerating Large Language Model Inference with Dynamic Low-Rank Substitution</h3>
+        <p data-lang="en">A dynamic low-rank substitution framework that adaptively switches among full-parameter, low-rank, and skip branches to reduce FLOPs and cache cost.</p>
+        <p data-lang="zh">提出动态低秩替代推理框架 Deputy，在注意力层与 FFN 层按 token 自适应选择全参数、低秩近似或跳过分支，并结合基于 LoRA 的最小二乘低秩构造与混合 KV Cache 设计，在尽量保持性能的同时显著降低推理 FLOPs 与缓存开销。</p>
       </article>
     </div>
   </section>
 
   <section class="homepage-section" id="full-publications">
-    <div class="section-heading">
-      <p class="section-kicker" data-lang="en">Full Publications</p>
+    <div class="section-heading compact-heading">
+      <p class="section-kicker" data-lang="en">Publications</p>
       <p class="section-kicker" data-lang="zh">论文列表</p>
-      <h2 data-lang="en">A manually curated publication list.</h2>
-      <h2 data-lang="zh">手动维护的论文列表。</h2>
-      <p data-lang="en">
-        This page currently foregrounds my recent work on efficient LLMs. For the broader and most up-to-date publication list,
-        please also visit my Google Scholar profile.
-      </p>
-      <p data-lang="zh">
-        当前页面重点展示我近期在大模型高效化方向上的论文；更完整、也更实时的论文列表请参考我的 Google Scholar 页面。
-      </p>
     </div>
 
-    <div class="year-blocks">
+    <div class="year-blocks year-blocks--single">
       <div class="year-block">
-        <h3>2026</h3>
-        <ul class="publication-list">
+        <ul class="publication-list publication-list--detailed">
           <li>
-            <span class="pub-title">Large Language Model Compression with Global Rank and Sparsity Optimization</span>
-            <span class="pub-meta">ICLR 2026</span>
-            <span class="pub-links-inline"><a href="https://arxiv.org/abs/2505.03801" target="_blank" rel="noopener">arXiv</a></span>
+            <span class="pub-title">Dynamic Operator Optimization for Efficient Multi-Tenant LoRA Model Serving</span>
+            <span class="pub-meta" data-lang="en">AAAI / CCF-A / First author + independent corresponding author</span>
+            <span class="pub-meta" data-lang="zh">AAAI / CCF-A / 一作+独立通讯</span>
+            <p class="pub-summary" data-lang="en">Proposes dynamic operator selection and scheduling for multi-tenant LoRA serving, improving online throughput and reducing service latency.</p>
+            <p class="pub-summary" data-lang="zh">面向多租户 LoRA 服务，提出动态算子选择与调度方法，提升在线推理吞吐并降低服务时延。</p>
           </li>
           <li>
-            <span class="pub-title">LaRA: Layer-wise rank allocation for efficient fine-tuning of pruned large language models</span>
-            <span class="pub-meta">Information Processing &amp; Management, 2026</span>
+            <span class="pub-title">RankAdaptor: Hierarchical Dynamic Low-Rank Adaptation for Structural Pruned LLMs</span>
+            <span class="pub-meta" data-lang="en">NAACL / CCF-B / First author</span>
+            <span class="pub-meta" data-lang="zh">NAACL / CCF-B / 一作</span>
+            <p class="pub-summary" data-lang="en">Proposes hierarchical rank allocation and performance modeling for structurally pruned LLMs, enabling more efficient low-rank fine-tuning.</p>
+            <p class="pub-summary" data-lang="zh">针对结构化剪枝 LLM，提出分层 rank 分配与性能建模方法，实现更高效的低秩微调。</p>
           </li>
-          <li>
-            <span class="pub-title">AutoQRA: Joint Optimization of Mixed-Precision Quantization and Low-rank Adapters for Efficient LLM Fine-Tuning</span>
-            <span class="pub-meta">arXiv 2026</span>
-            <span class="pub-links-inline"><a href="https://arxiv.org/abs/2602.22268" target="_blank" rel="noopener">arXiv</a></span>
-          </li>
-          <li>
-            <span class="pub-title">Balancing Fidelity and Plasticity: Aligning Mixed-Precision Fine-Tuning with Linguistic Hierarchies</span>
-            <span class="pub-meta">arXiv 2026</span>
-            <span class="pub-links-inline"><a href="https://arxiv.org/abs/2505.03802" target="_blank" rel="noopener">arXiv</a></span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="year-block">
-        <h3>2025</h3>
-        <ul class="publication-list">
           <li>
             <span class="pub-title">QPruner: Probabilistic Decision Quantization for Structured Pruning in Large Language Models</span>
-            <span class="pub-meta">NAACL 2025</span>
-            <span class="pub-links-inline"><a href="https://arxiv.org/abs/2412.11629" target="_blank" rel="noopener">arXiv</a></span>
+            <span class="pub-meta" data-lang="en">NAACL / CCF-B / First author</span>
+            <span class="pub-meta" data-lang="zh">NAACL / CCF-B / 一作</span>
+            <p class="pub-summary" data-lang="en">Introduces a probabilistic decision quantization strategy that better balances compression ratio and model accuracy for structured pruning.</p>
+            <p class="pub-summary" data-lang="zh">提出面向结构化剪枝模型的概率决策量化策略，在压缩率与模型精度之间取得更优平衡。</p>
+          </li>
+          <li>
+            <span class="pub-title">Large Language Model Compression with Global Rank and Sparsity Optimization</span>
+            <span class="pub-meta" data-lang="en">ICLR / CCF-A / First author</span>
+            <span class="pub-meta" data-lang="zh">ICLR / CCF-A / 一作</span>
+            <p class="pub-summary" data-lang="en">Presents a two-stage LLM compression method that jointly optimizes low-rank and sparse components across layers to better preserve performance under stronger compression.</p>
+            <p class="pub-summary" data-lang="zh">提出两阶段的 LLM 压缩方法，在全局范围联合优化各层的低秩组件和稀疏组件，更好处理低秩与稀疏的相互作用，从而在更强压缩下尽量保住模型性能。</p>
           </li>
           <li>
             <span class="pub-title">BSLoRA: Enhancing the Parameter Efficiency of LoRA with Intra-Layer and Inter-Layer Sharing</span>
-            <span class="pub-meta">ICML 2025</span>
+            <span class="pub-meta" data-lang="en">ICML / CCF-A / Second author</span>
+            <span class="pub-meta" data-lang="zh">ICML / CCF-A / 二作</span>
+            <p class="pub-summary" data-lang="en">Improves LoRA with intra-layer and inter-layer sharing, further reducing fine-tuning parameters while maintaining performance.</p>
+            <p class="pub-summary" data-lang="zh">通过层内与层间参数共享改进 LoRA 结构，在保持性能的同时进一步减少微调参数量。</p>
+          </li>
+          <li>
+            <span class="pub-title">Enhancing Object Coherence in Layout-to-Image Synthesis</span>
+            <span class="pub-meta" data-lang="en">ICME 2025 / CCF-B / Second author</span>
+            <span class="pub-meta" data-lang="zh">ICME 2025 / CCF-B / 二作</span>
+            <p class="pub-summary" data-lang="en">Combines global semantic fusion and self-similarity consistency attention in a diffusion framework to improve semantic relations and local physical consistency in layout-to-image synthesis.</p>
+            <p class="pub-summary" data-lang="zh">提出结合全局语义融合（GSF）与自相似一致性注意力（SCA）的扩散式布局生成框架，同时增强对象间语义关系与局部物理一致性，提升 layout-to-image 合成的生成质量与可控性。</p>
+          </li>
+          <li>
+            <span class="pub-title">Balancing Fidelity and Plasticity: Aligning Mixed-Precision Fine-Tuning with Linguistic Hierarchies</span>
+            <span class="pub-meta" data-lang="en">ACL 2026 / CCF-A / First author</span>
+            <span class="pub-meta" data-lang="zh">ACL2026 / CCF-A / 一作</span>
+            <p class="pub-summary" data-lang="en">Introduces QR-Adaptor, which jointly allocates quantization bitwidths and LoRA ranks from linguistic hierarchies to balance frozen-weight fidelity and task adaptability under limited memory.</p>
+            <p class="pub-summary" data-lang="zh">提出 QR-Adaptor，从语言层级出发联合分配各层量化比特宽度与 LoRA 秩，在有限显存下协调冻结权重保真度与任务适应性，使 4-bit 预算下的微调效果接近 16-bit 基线。</p>
+          </li>
+          <li>
+            <span class="pub-title">CoRE: A Fine-Grained Code Reasoning Benchmark Beyond Output Prediction</span>
+            <span class="pub-meta" data-lang="en">ACL 2026 / CCF-A</span>
+            <span class="pub-meta" data-lang="zh">ACL2026 / CCF-A</span>
+            <p class="pub-summary" data-lang="en">Introduces CoRE, a fine-grained code reasoning benchmark that evaluates whether LLMs truly understand execution via implementation invariance and process transparency.</p>
+            <p class="pub-summary" data-lang="zh">提出细粒度代码推理评测基准 CoRE，从实现不变性与过程透明性两个维度评估大语言模型是否真正理解代码执行过程，并揭示当前模型在等价实现上的鲁棒性不足以及仅答对最终输出却无法正确追踪中间状态的“表面执行”问题。</p>
+          </li>
+          <li>
+            <span class="pub-title">Deputy: Accelerating Large Language Model Inference with Dynamic Low-Rank Substitution</span>
+            <span class="pub-meta" data-lang="en">ACL 2026 / CCF-A / Co-first author</span>
+            <span class="pub-meta" data-lang="zh">ACL2026 / CCF-A / 共一</span>
+            <p class="pub-summary" data-lang="en">Proposes a dynamic low-rank substitution framework that adaptively chooses full-parameter, low-rank, or skip branches per token and significantly reduces FLOPs and cache cost.</p>
+            <p class="pub-summary" data-lang="zh">提出动态低秩替代推理框架 Deputy，在注意力层与 FFN 层按 token 自适应选择全参数、低秩近似或跳过分支，并结合基于 LoRA 的最小二乘低秩构造与混合 KV Cache 设计，在尽量保持性能的同时显著降低推理 FLOPs 与缓存开销。</p>
+          </li>
+          <li>
+            <span class="pub-title">AutoQRA: Joint Optimization of Mixed-Precision Quantization and Low-rank Adapters for Efficient LLM Fine-Tuning</span>
+            <span class="pub-meta" data-lang="en">Under review at ICML 2026 / CCF-A</span>
+            <span class="pub-meta" data-lang="zh">ICML2026在投 / CCF-A</span>
+            <p class="pub-summary" data-lang="en">Jointly optimizes per-layer quantization bitwidths and LoRA ranks for mixed-precision fine-tuning using multi-fidelity evolutionary search and trust-region Bayesian optimization.</p>
+            <p class="pub-summary" data-lang="zh">提出 AutoQRA，在混合量化微调中联合优化每层量化位宽与 LoRA 秩，并结合多保真进化搜索与信赖域贝叶斯优化，在给定内存预算下逼近全精度微调性能。</p>
+          </li>
+          <li>
+            <span class="pub-title">BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Models Inference</span>
+            <span class="pub-meta" data-lang="en">Under review at ICML 2026 / CCF-A</span>
+            <span class="pub-meta" data-lang="zh">ICML2026在投 / CCF-A</span>
+            <p class="pub-summary" data-lang="en">Proposes budget-driven dynamic depth routing with input- and budget-adaptive layer execution, plus first-layer KV cache reuse and budget prediction.</p>
+            <p class="pub-summary" data-lang="zh">提出预算驱动的动态深度路由框架，通过决策模块按输入与预算自适应选择执行层，并结合首层 KV Cache 复用与预算预测器，在不同剪枝配置下兼顾推理性能与计算开销。</p>
+          </li>
+          <li>
+            <span class="pub-title">SoulX-FlashHead: Oracle-guided Generation of Infinite Real-time Streaming Talking Heads</span>
+            <span class="pub-meta" data-lang="en">Technical Report</span>
+            <span class="pub-meta" data-lang="zh">Technical Report</span>
+            <p class="pub-summary" data-lang="en">Presents a unified 1.3B real-time streaming talking-head framework with streaming-aware spatiotemporal pretraining, temporal audio context caching, and oracle-guided bidirectional distillation.</p>
+            <p class="pub-summary" data-lang="zh">提出统一的 1.3B 实时流式数字人生成框架，通过流式感知时空预训练、时序音频上下文缓存与 Oracle-guided 双向蒸馏缓解长序列漂移，在 HDTF/VFHQ 上取得领先结果，Lite 版本单张 RTX 4090 可达 96 FPS。</p>
           </li>
         </ul>
       </div>
