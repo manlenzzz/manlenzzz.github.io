@@ -5,11 +5,8 @@ main:
   - title: "Research"
     url: "#research"
 
-  - title: "Selected"
-    url: "#selected-publications"
-
   - title: "Publications"
-    url: "#full-publications"
+    url: "#publications"
 
   - title: "CV"
     url: "#cv"
