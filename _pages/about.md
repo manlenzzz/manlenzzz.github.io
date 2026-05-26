@@ -36,11 +36,10 @@ redirect_from:
       </p>
 
       <p class="hero-note" data-lang="en">
-        A recurring theme in my work is simple: efficiency methods should translate into real memory savings and real inference benefits,
-        not only cleaner sparsity numbers in a figure.
+        I care about efficiency methods that translate into real memory and latency wins — not just nicer numbers on a chart.
       </p>
       <p class="hero-note" data-lang="zh">
-        我的一条持续研究主线很直接：高效化方法应该真正带来显存节省和推理收益，而不只是停留在图表里好看的稀疏指标。
+        我关心的是能真正带来显存和推理收益的高效化方法，而不是图表上更好看的数字。
       </p>
 
       <div class="hero-actions">
@@ -85,64 +84,36 @@ redirect_from:
       <p class="section-kicker" data-lang="zh">研究方向</p>
       <h2 data-lang="en">Efficient large models for real systems.</h2>
       <h2 data-lang="zh">面向真实系统的大模型高效化。</h2>
-      <p data-lang="en">
-        My recent work lies at the intersection of compression, efficient adaptation, and budget-aware inference for large language models.
-        I am particularly interested in methods that co-design these components instead of optimizing them in isolation.
-      </p>
-      <p data-lang="zh">
-        我近期的工作位于大语言模型压缩、高效适配和预算感知推理的交叉点，尤其关注把这些模块联合起来设计，而不是彼此割裂地分别优化。
-      </p>
     </div>
 
     <div class="research-grid">
       <article class="research-card">
-        <h3 data-lang="en">Compression With Real Memory Gains</h3>
-        <h3 data-lang="zh">真正带来内存收益的压缩</h3>
-        <p data-lang="en">
-          I study structured pruning and quantization strategies that can reduce actual memory cost while keeping downstream quality as stable as possible.
-        </p>
-        <p data-lang="zh">
-          我关注能够真正降低内存开销的结构化剪枝与量化方法，同时尽可能保持下游任务性能稳定。
-        </p>
+        <h3 data-lang="en">Compression with real memory gains</h3>
+        <h3 data-lang="zh">真正省显存的压缩</h3>
+        <p data-lang="en">Structured pruning and quantization that actually reduce memory, not just FLOPs on paper.</p>
+        <p data-lang="zh">结构化剪枝与量化，关注真实可落地的显存收益，而不只是纸面上的 FLOPs。</p>
       </article>
 
       <article class="research-card">
-        <h3 data-lang="en">Efficient Adaptation After Compression</h3>
-        <h3 data-lang="zh">压缩后的高效适配</h3>
-        <p data-lang="en">
-          A second line of work explores low-rank adaptation, mixed precision, and layer-wise allocation so compressed models can still be tuned effectively.
-        </p>
-        <p data-lang="zh">
-          第二条主线聚焦低秩适配、混合精度和层级分配，使压缩后的模型依然能够被高效而稳定地微调。
-        </p>
+        <h3 data-lang="en">Adaptation after compression</h3>
+        <h3 data-lang="zh">压缩后的适配</h3>
+        <p data-lang="en">Low-rank adapters, mixed precision, and layer-wise allocation for tuning compressed models.</p>
+        <p data-lang="zh">为压缩后的模型设计低秩适配、混合精度与层级分配的微调方案。</p>
       </article>
 
       <article class="research-card">
-        <h3 data-lang="en">Budget-Aware Inference</h3>
+        <h3 data-lang="en">Budget-aware inference</h3>
         <h3 data-lang="zh">预算感知推理</h3>
-        <p data-lang="en">
-          I am also interested in dynamic sparsity and adaptive computation methods that better trade off inference efficiency and model quality under practical budgets.
-        </p>
-        <p data-lang="zh">
-          我也关注动态稀疏与自适应计算，希望在实际预算约束下更好地平衡推理效率与模型效果。
-        </p>
+        <p data-lang="en">Dynamic sparsity and adaptive computation that trade efficiency for quality at known budgets.</p>
+        <p data-lang="zh">在确定的预算下，用动态稀疏与自适应计算换取更好的效率—质量折中。</p>
       </article>
     </div>
   </section>
 
   <section class="homepage-section" id="publications">
-    <div class="section-heading">
+    <div class="section-heading compact-heading">
       <p class="section-kicker" data-lang="en">Publications</p>
-      <p class="section-kicker" data-lang="zh">论文列表</p>
-      <h2 data-lang="en">A manually curated publication list.</h2>
-      <h2 data-lang="zh">手动维护的论文列表。</h2>
-      <p data-lang="en">
-        The list below covers my recent work around large language model compression, parameter-efficient adaptation, and adaptive inference.
-        For the most up-to-date version, please also see my Google Scholar profile.
-      </p>
-      <p data-lang="zh">
-        下面是我近期围绕大语言模型压缩、参数高效适配与自适应推理的论文。最新与最完整的版本也可参考我的 Google Scholar 页面。
-      </p>
+      <p class="section-kicker" data-lang="zh">论文</p>
     </div>
 
     <div class="year-blocks">
@@ -248,27 +219,12 @@ redirect_from:
     </div>
   </section>
 
-  <section class="homepage-section" id="cv">
-    <div class="section-heading compact-heading">
-      <p class="section-kicker" data-lang="en">CV</p>
-      <p class="section-kicker" data-lang="zh">简历</p>
-      <h2 data-lang="en">Please email me for the latest CV.</h2>
-      <h2 data-lang="zh">最新简历请通过邮件联系我获取。</h2>
-      <p data-lang="en">I am organizing a clean downloadable version for this site.</p>
-      <p data-lang="zh">我正在整理适合挂在主页上的简历版本，当前可通过邮件索取最新版。</p>
-    </div>
-    <div class="hero-actions hero-actions--compact">
-      <a class="home-button home-button--primary" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-      <a class="home-button" href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar</a>
-    </div>
-  </section>
-
   <section class="homepage-section" id="contact">
     <div class="section-heading compact-heading">
       <p class="section-kicker" data-lang="en">Contact</p>
       <p class="section-kicker" data-lang="zh">联系</p>
-      <h2 data-lang="en">I am happy to discuss research collaborations and related opportunities.</h2>
-      <h2 data-lang="zh">欢迎交流研究合作以及相关学术机会。</h2>
+      <h2 data-lang="en">Get in touch.</h2>
+      <h2 data-lang="zh">联系我。</h2>
     </div>
 
     <div class="contact-grid">
