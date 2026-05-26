@@ -28,18 +28,19 @@ redirect_from:
       <h1 data-lang="zh">周昌海</h1>
 
       <p class="hero-lead" data-lang="en">
-        I am a PhD candidate at Fudan University working on efficient and deployable large language models,
-        with current interests in structured compression, parameter-efficient adaptation, and adaptive inference.
+        Direct-PhD student at Fudan University (since 2023), working across the full stack of efficient large language models —
+        from compression and quantization, to post-compression adaptation, to adaptive inference on real hardware.
       </p>
       <p class="hero-lead" data-lang="zh">
-        我是复旦大学博士生，主要研究高效且可部署的大语言模型，当前关注结构化压缩、参数高效适配，以及自适应推理。
+        复旦大学硕博连读在读（2023 级），研究方向围绕大语言模型的高效化全栈：从压缩与量化，到压缩后适配，再到可在真实硬件上跑起来的自适应推理。
       </p>
 
       <p class="hero-note" data-lang="en">
-        I care about efficiency methods that translate into real memory and latency wins — not just nicer numbers on a chart.
+        I like methods that survive contact with a real GPU — algorithm, kernel, and serving system in the same head.
+        Recent first-author work spans AAAI, NAACL, ICLR, ACL, ICML, and a NeurIPS submission.
       </p>
       <p class="hero-note" data-lang="zh">
-        我关心的是能真正带来显存和推理收益的高效化方法，而不是图表上更好看的数字。
+        我偏好那些“能在真实 GPU 上跑得动”的方法——算法、算子和服务系统放在同一颗脑袋里思考。近两年一作覆盖 AAAI、NAACL、ICLR、ACL、ICML 与一篇在投 NeurIPS。
       </p>
 
       <div class="hero-actions">
@@ -56,8 +57,8 @@ redirect_from:
         <div class="meta-card">
           <span data-lang="en">Focus</span>
           <span data-lang="zh">方向</span>
-          <strong data-lang="en">LLM compression, PEFT, adaptive inference</strong>
-          <strong data-lang="zh">大模型压缩、参数高效微调、自适应推理</strong>
+          <strong data-lang="en">LLM compression · PEFT · adaptive inference · serving</strong>
+          <strong data-lang="zh">LLM 压缩 · 参数高效微调 · 自适应推理 · 服务系统</strong>
         </div>
         <div class="meta-card">
           <span data-lang="en">Affiliation</span>
@@ -81,31 +82,57 @@ redirect_from:
   <section class="homepage-section" id="research">
     <div class="section-heading">
       <p class="section-kicker" data-lang="en">Research</p>
-      <p class="section-kicker" data-lang="zh">研究方向</p>
-      <h2 data-lang="en">Efficient large models for real systems.</h2>
-      <h2 data-lang="zh">面向真实系统的大模型高效化。</h2>
+      <p class="section-kicker" data-lang="zh">研究主线</p>
+      <h2 data-lang="en">One thread, three stages.</h2>
+      <h2 data-lang="zh">一条主线，三个阶段。</h2>
+      <p data-lang="en">
+        My research follows a single arc — make a large model smaller, keep it accurate after you do, and let it spend its compute adaptively at inference.
+        Each stage feeds the next: lessons from compression shape how I do adaptation; lessons from adaptation shape how I think about runtime sparsity and dynamic execution.
+      </p>
+      <p data-lang="zh">
+        我的研究沿着一条主线推进——先把大模型压小，再让它在压完之后仍能被高效调好，最后让它在推理时把算力花在该花的地方。
+        三个阶段彼此衔接：从压缩里学到的东西塑造了我做适配的方式，从适配里看到的现象又推动我去研究运行时稀疏与动态执行。
+      </p>
     </div>
 
     <div class="research-grid">
       <article class="research-card">
-        <h3 data-lang="en">Compression with real memory gains</h3>
-        <h3 data-lang="zh">真正省显存的压缩</h3>
-        <p data-lang="en">Structured pruning and quantization that actually reduce memory, not just FLOPs on paper.</p>
-        <p data-lang="zh">结构化剪枝与量化，关注真实可落地的显存收益，而不只是纸面上的 FLOPs。</p>
+        <h3 data-lang="en">① Compression that actually saves memory</h3>
+        <h3 data-lang="zh">① 真正能省显存的压缩</h3>
+        <p data-lang="en">
+          Structured pruning and quantization where the wins show up on the GPU, not just on the FLOPs sheet.
+          Representative work: <strong>Global Rank &amp; Sparsity</strong> (ICLR&nbsp;2026), <strong>QPruner</strong> (NAACL&nbsp;2025).
+        </p>
+        <p data-lang="zh">
+          结构化剪枝与量化，关心 GPU 上真的省下来的显存，而不是只在 FLOPs 表格里好看的数字。
+          代表工作：<strong>Global Rank &amp; Sparsity</strong>（ICLR&nbsp;2026）、<strong>QPruner</strong>（NAACL&nbsp;2025）。
+        </p>
       </article>
 
       <article class="research-card">
-        <h3 data-lang="en">Adaptation after compression</h3>
-        <h3 data-lang="zh">压缩后的适配</h3>
-        <p data-lang="en">Low-rank adapters, mixed precision, and layer-wise allocation for tuning compressed models.</p>
-        <p data-lang="zh">为压缩后的模型设计低秩适配、混合精度与层级分配的微调方案。</p>
+        <h3 data-lang="en">② Adaptation after compression</h3>
+        <h3 data-lang="zh">② 压缩之后还能调得动</h3>
+        <p data-lang="en">
+          Joint allocation of bitwidth, low-rank capacity, and layer-wise budgets so compressed models stay tunable.
+          Representative work: <strong>RankAdaptor</strong> (NAACL&nbsp;2025), <strong>QR-Adaptor</strong> (ACL&nbsp;2026), <strong>AutoQRA</strong> (ICML&nbsp;2026).
+        </p>
+        <p data-lang="zh">
+          把量化位宽、低秩容量与层级预算一起分配，让压缩之后的模型仍然可被高效微调。
+          代表工作：<strong>RankAdaptor</strong>（NAACL&nbsp;2025）、<strong>QR-Adaptor</strong>（ACL&nbsp;2026）、<strong>AutoQRA</strong>（ICML&nbsp;2026）。
+        </p>
       </article>
 
       <article class="research-card">
-        <h3 data-lang="en">Budget-aware inference</h3>
-        <h3 data-lang="zh">预算感知推理</h3>
-        <p data-lang="en">Dynamic sparsity and adaptive computation that trade efficiency for quality at known budgets.</p>
-        <p data-lang="zh">在确定的预算下，用动态稀疏与自适应计算换取更好的效率—质量折中。</p>
+        <h3 data-lang="en">③ Adaptive inference &amp; serving</h3>
+        <h3 data-lang="zh">③ 自适应推理与服务系统</h3>
+        <p data-lang="en">
+          Per-token paths, executable activation sparsity, and operator scheduling that translate algorithmic ideas into real throughput.
+          Representative work: <strong>Deputy</strong> (ACL&nbsp;2026), <strong>Grouped Low-Bit Sparsity</strong> (NeurIPS&nbsp;2026, under review), <strong>Dynamic Operator for Multi-Tenant LoRA</strong> (AAAI&nbsp;2025).
+        </p>
+        <p data-lang="zh">
+          按 token 选择执行路径、让激活稀疏在分组量化下真的可执行、为多租户 LoRA 设计动态算子——把算法想法落成端到端可观测的吞吐收益。
+          代表工作：<strong>Deputy</strong>（ACL&nbsp;2026）、<strong>Grouped Low-Bit Sparsity</strong>（NeurIPS&nbsp;2026 在投）、<strong>Dynamic Operator for Multi-Tenant LoRA</strong>（AAAI&nbsp;2025）。
+        </p>
       </article>
     </div>
   </section>
