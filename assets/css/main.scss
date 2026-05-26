@@ -218,7 +218,8 @@ html[data-site-lang="zh"] [data-lang="en"] {
 .hero-lead,
 .hero-note,
 .section-heading p,
-.research-card p,
+.interest-list,
+.interest-footer,
 .contact-card strong,
 .publication-list,
 .pub-links-inline {
@@ -375,14 +376,12 @@ html[data-site-lang="zh"] [data-lang="en"] {
     line-height: 1.75;
 }
 
-.research-grid,
 .contact-grid,
 .year-blocks {
     display: grid;
     gap: 1rem;
 }
 
-.research-card,
 .contact-card,
 .year-block {
     border: 1px solid var(--home-line);
@@ -390,19 +389,31 @@ html[data-site-lang="zh"] [data-lang="en"] {
     background: var(--home-panel);
 }
 
-.research-card {
-    padding: 1.35rem;
-    background: linear-gradient(180deg, rgba(246, 243, 234, 0.82), #ffffff 70%);
+.interest-list {
+    margin: 1.2rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.45rem 1.6rem;
+    line-height: 1.6;
 }
 
-.research-card h3 {
-    margin: 0 0 0.8rem;
-    font-size: 1.3rem;
+.interest-list li {
+    position: relative;
+    padding-left: 1rem;
 }
 
-.research-card p {
-    margin: 0;
-    line-height: 1.7;
+.interest-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--home-accent);
+}
+
+.interest-footer {
+    margin: 1.2rem 0 0;
+    font-size: 0.95rem;
 }
 
 .contact-label {
@@ -506,7 +517,6 @@ html[data-site-lang="zh"] [data-lang="en"] {
     }
 
     .hero-meta,
-    .research-grid,
     .year-blocks {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }

@@ -28,19 +28,11 @@ redirect_from:
       <h1 data-lang="zh">周昌海</h1>
 
       <p class="hero-lead" data-lang="en">
-        Direct-PhD student at Fudan University (since 2023), working across the full stack of efficient large language models —
-        from compression and quantization, to post-compression adaptation, to adaptive inference on real hardware.
+        Direct-track PhD student at Fudan University, enrolled in 2023. My research focuses on large language models,
+        with a particular interest in making them more efficient to train, adapt, and deploy.
       </p>
       <p class="hero-lead" data-lang="zh">
-        复旦大学硕博连读在读（2023 级），研究方向围绕大语言模型的高效化全栈：从压缩与量化，到压缩后适配，再到可在真实硬件上跑起来的自适应推理。
-      </p>
-
-      <p class="hero-note" data-lang="en">
-        I like methods that survive contact with a real GPU — algorithm, kernel, and serving system in the same head.
-        Recent first-author work spans AAAI, NAACL, ICLR, ACL, ICML, and a NeurIPS submission.
-      </p>
-      <p class="hero-note" data-lang="zh">
-        我偏好那些“能在真实 GPU 上跑得动”的方法——算法、算子和服务系统放在同一颗脑袋里思考。近两年一作覆盖 AAAI、NAACL、ICLR、ACL、ICML 与一篇在投 NeurIPS。
+        复旦大学硕博连读在读，2023 级。研究方向为大语言模型，特别关注其训练、适配与部署中的效率问题。
       </p>
 
       <div class="hero-actions">
@@ -82,59 +74,50 @@ redirect_from:
   <section class="homepage-section" id="research">
     <div class="section-heading">
       <p class="section-kicker" data-lang="en">Research</p>
-      <p class="section-kicker" data-lang="zh">研究主线</p>
-      <h2 data-lang="en">One thread, three stages.</h2>
-      <h2 data-lang="zh">一条主线，三个阶段。</h2>
+      <p class="section-kicker" data-lang="zh">研究兴趣</p>
+      <h2 data-lang="en">Research interests</h2>
+      <h2 data-lang="zh">研究兴趣</h2>
       <p data-lang="en">
-        My research follows a single arc — make a large model smaller, keep it accurate after you do, and let it spend its compute adaptively at inference.
-        Each stage feeds the next: lessons from compression shape how I do adaptation; lessons from adaptation shape how I think about runtime sparsity and dynamic execution.
+        I am broadly interested in large language models. Current topics I work on or follow closely include:
       </p>
       <p data-lang="zh">
-        我的研究沿着一条主线推进——先把大模型压小，再让它在压完之后仍能被高效调好，最后让它在推理时把算力花在该花的地方。
-        三个阶段彼此衔接：从压缩里学到的东西塑造了我做适配的方式，从适配里看到的现象又推动我去研究运行时稀疏与动态执行。
+        我的研究兴趣广泛围绕大语言模型展开，目前主要关注或在做的方向包括：
       </p>
     </div>
 
-    <div class="research-grid">
-      <article class="research-card">
-        <h3 data-lang="en">① Compression that actually saves memory</h3>
-        <h3 data-lang="zh">① 真正能省显存的压缩</h3>
-        <p data-lang="en">
-          Structured pruning and quantization where the wins show up on the GPU, not just on the FLOPs sheet.
-          Representative work: <strong>Global Rank &amp; Sparsity</strong> (ICLR&nbsp;2026), <strong>QPruner</strong> (NAACL&nbsp;2025).
-        </p>
-        <p data-lang="zh">
-          结构化剪枝与量化，关心 GPU 上真的省下来的显存，而不是只在 FLOPs 表格里好看的数字。
-          代表工作：<strong>Global Rank &amp; Sparsity</strong>（ICLR&nbsp;2026）、<strong>QPruner</strong>（NAACL&nbsp;2025）。
-        </p>
-      </article>
+    <ul class="interest-list">
+      <li>
+        <span data-lang="en">Model compression and quantization</span>
+        <span data-lang="zh">模型压缩与量化</span>
+      </li>
+      <li>
+        <span data-lang="en">Parameter-efficient fine-tuning</span>
+        <span data-lang="zh">参数高效微调</span>
+      </li>
+      <li>
+        <span data-lang="en">Efficient and adaptive inference</span>
+        <span data-lang="zh">高效与自适应推理</span>
+      </li>
+      <li>
+        <span data-lang="en">LLM serving systems</span>
+        <span data-lang="zh">大模型服务系统</span>
+      </li>
+      <li>
+        <span data-lang="en">Evaluation and reasoning of LLMs</span>
+        <span data-lang="zh">大模型评测与推理能力</span>
+      </li>
+      <li>
+        <span data-lang="en">Multimodal and generative models</span>
+        <span data-lang="zh">多模态与生成模型</span>
+      </li>
+    </ul>
 
-      <article class="research-card">
-        <h3 data-lang="en">② Adaptation after compression</h3>
-        <h3 data-lang="zh">② 压缩之后还能调得动</h3>
-        <p data-lang="en">
-          Joint allocation of bitwidth, low-rank capacity, and layer-wise budgets so compressed models stay tunable.
-          Representative work: <strong>RankAdaptor</strong> (NAACL&nbsp;2025), <strong>QR-Adaptor</strong> (ACL&nbsp;2026), <strong>AutoQRA</strong> (ICML&nbsp;2026).
-        </p>
-        <p data-lang="zh">
-          把量化位宽、低秩容量与层级预算一起分配，让压缩之后的模型仍然可被高效微调。
-          代表工作：<strong>RankAdaptor</strong>（NAACL&nbsp;2025）、<strong>QR-Adaptor</strong>（ACL&nbsp;2026）、<strong>AutoQRA</strong>（ICML&nbsp;2026）。
-        </p>
-      </article>
-
-      <article class="research-card">
-        <h3 data-lang="en">③ Adaptive inference &amp; serving</h3>
-        <h3 data-lang="zh">③ 自适应推理与服务系统</h3>
-        <p data-lang="en">
-          Per-token paths, executable activation sparsity, and operator scheduling that translate algorithmic ideas into real throughput.
-          Representative work: <strong>Deputy</strong> (ACL&nbsp;2026), <strong>Grouped Low-Bit Sparsity</strong> (NeurIPS&nbsp;2026, under review), <strong>Dynamic Operator for Multi-Tenant LoRA</strong> (AAAI&nbsp;2025).
-        </p>
-        <p data-lang="zh">
-          按 token 选择执行路径、让激活稀疏在分组量化下真的可执行、为多租户 LoRA 设计动态算子——把算法想法落成端到端可观测的吞吐收益。
-          代表工作：<strong>Deputy</strong>（ACL&nbsp;2026）、<strong>Grouped Low-Bit Sparsity</strong>（NeurIPS&nbsp;2026 在投）、<strong>Dynamic Operator for Multi-Tenant LoRA</strong>（AAAI&nbsp;2025）。
-        </p>
-      </article>
-    </div>
+    <p class="interest-footer" data-lang="en">
+      For specific projects, see <a href="#publications">Publications</a>.
+    </p>
+    <p class="interest-footer" data-lang="zh">
+      具体研究工作请见<a href="#publications">论文列表</a>。
+    </p>
   </section>
 
   <section class="homepage-section" id="publications">
