@@ -9,18 +9,21 @@ classes: wide
 
 <article class="research-note">
   <header class="note-hero">
-    <p class="section-kicker">Research Note</p>
+    <nav class="note-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/' | relative_url }}#research-notes">Notes</a>
+      <span>/</span>
+      <span>negative result</span>
+    </nav>
     <h1>When a Better Clock Is Not a Better Sampler</h1>
     <p class="note-subtitle">A negative result from testing damage-aligned clocks for few-step consistency sampling.</p>
     <div class="note-meta-row">
       <span>June 16, 2026</span>
-      <span>Negative result</span>
+      <span>ImageNet-64 diagnostic</span>
       <span>Consistency models</span>
     </div>
   </header>
 
   <div class="note-body" markdown="1">
-# When a Better Clock Is Not a Better Sampler
 
 A few-step generator is a brutal budget allocator. If we only get two, four, or eight model evaluations, every step has to matter. That makes a simple hypothesis tempting: raw diffusion time may be the wrong axis to spend those steps on. Equal intervals in raw time do not necessarily mean equal changes in the final denoised image. Maybe a sampler should step through a clock aligned to endpoint damage instead.
 

@@ -23,8 +23,15 @@ class HomepageTest(unittest.TestCase):
 
     def test_navigation_points_to_homepage_sections(self):
         nav = (ROOT / '_data' / 'navigation.yml').read_text()
-        for anchor in ['#about', '#research', '#research-notes', '#publications', '#contact']:
+        for anchor in ['#research', '#research-notes', '#publications', '#contact']:
             self.assertIn(anchor, nav)
+        self.assertNotIn('Homepage', nav)
+        self.assertNotIn('#about', nav)
+
+    def test_seo_title_is_not_hardcoded_to_homepage(self):
+        seo = (ROOT / '_includes' / 'seo.html').read_text()
+        self.assertNotIn('<title>{{ site.title }} - Homepage</title>', seo)
+        self.assertIn('seo_title', seo)
 
     def test_damage_clock_note_exists(self):
         note = ROOT / 'notes' / 'damage-clock-negative-result' / 'index.md'

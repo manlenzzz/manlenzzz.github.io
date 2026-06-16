@@ -120,28 +120,29 @@ redirect_from:
     </p>
   </section>
 
-  <section class="homepage-section" id="research-notes">
+  <section class="homepage-section notes-section" id="research-notes">
     <div class="section-heading compact-heading">
-      <p class="section-kicker" data-lang="en">Research Notes</p>
-      <p class="section-kicker" data-lang="zh">研究札记</p>
-      <h2 data-lang="en">Short records from experiments that changed the decision.</h2>
-      <h2 data-lang="zh">记录那些改变研究决策的实验。</h2>
+      <p class="section-kicker" data-lang="en">Notes</p>
+      <p class="section-kicker" data-lang="zh">札记</p>
+      <h2 data-lang="en">Experiment notes worth keeping.</h2>
+      <h2 data-lang="zh">值得留下来的实验记录。</h2>
       <p data-lang="en">
-        Compact technical notes, including negative results and diagnostic experiments that are useful before starting the next paper.
+        Short writeups for negative results, diagnostic runs, and decisions that should survive beyond a single experiment folder.
       </p>
       <p data-lang="zh">
-        较短的技术记录，包括负结果和诊断实验，重点是保留对下一篇论文真正有用的判断依据。
+        这里放负结果、诊断实验和研究决策记录，不再让它们散落在一次性的 experiment folder 里。
       </p>
     </div>
 
-    <div class="note-teaser-grid">
-      <a class="note-teaser" href="{{ '/notes/damage-clock-negative-result/' | relative_url }}">
-        <span class="note-label">Negative Result · 2026</span>
+    <a class="note-index-row" href="{{ '/notes/damage-clock-negative-result/' | relative_url }}">
+      <span class="note-index-date">2026.06.16</span>
+      <span class="note-index-main">
         <strong>When a Better Clock Is Not a Better Sampler</strong>
-        <span class="note-desc" data-lang="en">A bounded ImageNet-64 consistency-model diagnostic showing that post-hoc damage-aligned sampler clocks do not beat the checkpoint-native skip-step rule.</span>
-        <span class="note-desc" data-lang="zh">一个 ImageNet-64 consistency model 诊断实验：后验 damage-aligned sampler clock 没能超过 checkpoint 原生 skip-step 规则。</span>
-      </a>
-    </div>
+        <span data-lang="en">A consistency-model diagnostic where a post-hoc damage clock loses to the checkpoint-native skip rule.</span>
+        <span data-lang="zh">一个 consistency model 诊断实验：后验 damage clock 输给了 checkpoint 原生 skip 规则。</span>
+      </span>
+      <span class="note-index-tag">negative result</span>
+    </a>
   </section>
 
   <section class="homepage-section" id="publications">
