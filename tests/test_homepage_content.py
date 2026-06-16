@@ -14,9 +14,27 @@ class HomepageTest(unittest.TestCase):
         config = (ROOT / '_config.yml').read_text()
         self.assertIn('baseurl                  : ""', config)
 
-    def test_publications_section_present(self):
+    def test_homepage_sections_present(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
+        self.assertIn('id="research"', about)
+        self.assertIn('id="research-notes"', about)
         self.assertIn('id="publications"', about)
+        self.assertIn('When a Better Clock Is Not a Better Sampler', about)
+
+    def test_navigation_points_to_homepage_sections(self):
+        nav = (ROOT / '_data' / 'navigation.yml').read_text()
+        for anchor in ['#about', '#research', '#research-notes', '#publications', '#contact']:
+            self.assertIn(anchor, nav)
+
+    def test_damage_clock_note_exists(self):
+        note = ROOT / 'notes' / 'damage-clock-negative-result' / 'index.md'
+        self.assertTrue(note.is_file())
+        note_text = note.read_text()
+        self.assertIn('permalink: /notes/damage-clock-negative-result/', note_text)
+        self.assertIn('When a Better Clock Is Not a Better Sampler', note_text)
+        self.assertIn('figures/fig_result_delta_revised.svg', note_text)
+        self.assertTrue((note.parent / 'figures' / 'fig_result_delta_revised.svg').is_file())
+        self.assertTrue((note.parent / 'data' / 'r287_mean_fid.csv').is_file())
 
 
 if __name__ == '__main__':

@@ -120,6 +120,30 @@ redirect_from:
     </p>
   </section>
 
+  <section class="homepage-section" id="research-notes">
+    <div class="section-heading compact-heading">
+      <p class="section-kicker" data-lang="en">Research Notes</p>
+      <p class="section-kicker" data-lang="zh">研究札记</p>
+      <h2 data-lang="en">Short records from experiments that changed the decision.</h2>
+      <h2 data-lang="zh">记录那些改变研究决策的实验。</h2>
+      <p data-lang="en">
+        Compact technical notes, including negative results and diagnostic experiments that are useful before starting the next paper.
+      </p>
+      <p data-lang="zh">
+        较短的技术记录，包括负结果和诊断实验，重点是保留对下一篇论文真正有用的判断依据。
+      </p>
+    </div>
+
+    <div class="note-teaser-grid">
+      <a class="note-teaser" href="{{ '/notes/damage-clock-negative-result/' | relative_url }}">
+        <span class="note-label">Negative Result · 2026</span>
+        <strong>When a Better Clock Is Not a Better Sampler</strong>
+        <span class="note-desc" data-lang="en">A bounded ImageNet-64 consistency-model diagnostic showing that post-hoc damage-aligned sampler clocks do not beat the checkpoint-native skip-step rule.</span>
+        <span class="note-desc" data-lang="zh">一个 ImageNet-64 consistency model 诊断实验：后验 damage-aligned sampler clock 没能超过 checkpoint 原生 skip-step 规则。</span>
+      </a>
+    </div>
+  </section>
+
   <section class="homepage-section" id="publications">
     <div class="section-heading compact-heading">
       <p class="section-kicker" data-lang="en">Publications</p>
