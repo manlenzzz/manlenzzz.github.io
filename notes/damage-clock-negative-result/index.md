@@ -9,17 +9,22 @@ classes: wide
 
 <article class="research-note">
   <header class="note-hero">
-    <nav class="note-breadcrumb" aria-label="Breadcrumb">
-      <a href="{{ '/' | relative_url }}#research-notes">Notes</a>
-      <span>/</span>
-      <span>negative result</span>
-    </nav>
-    <h1>When a Better Clock Is Not a Better Sampler</h1>
-    <p class="note-subtitle">A negative result from testing damage-aligned clocks for few-step consistency sampling.</p>
-    <div class="note-meta-row">
-      <span>June 16, 2026</span>
-      <span>ImageNet-64 diagnostic</span>
-      <span>Consistency models</span>
+    <div class="note-hero-copy">
+      <nav class="note-breadcrumb" aria-label="Breadcrumb">
+        <a href="{{ '/' | relative_url }}#research-notes">Notes</a>
+        <span>/</span>
+        <span>negative result</span>
+      </nav>
+      <h1>When a Better Clock Is Not a Better Sampler</h1>
+      <p class="note-subtitle">A negative result from testing damage-aligned clocks for few-step consistency sampling.</p>
+      <div class="note-meta-row">
+        <span>June 16, 2026</span>
+        <span>ImageNet-64 diagnostic</span>
+        <span>Consistency models</span>
+      </div>
+    </div>
+    <div class="note-hero-visual">
+      <img src="figures/fig_result_delta_revised.svg" alt="FID delta plot for the damage-clock diagnostic">
     </div>
   </header>
 

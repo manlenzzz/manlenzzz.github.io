@@ -33,6 +33,19 @@ class HomepageTest(unittest.TestCase):
         self.assertNotIn('<title>{{ site.title }} - Homepage</title>', seo)
         self.assertIn('seo_title', seo)
 
+    def test_research_homepage_uses_redesigned_layout(self):
+        about = (ROOT / '_pages' / 'about.md').read_text()
+        self.assertIn('<main class="homepage">', about)
+        self.assertIn('class="hero-nameplate"', about)
+        self.assertIn('class="note-index-visual"', about)
+        self.assertNotIn('section-kicker', about)
+        self.assertNotIn('note-index-tag', about)
+
+    def test_research_note_has_visual_hero(self):
+        note = (ROOT / 'notes' / 'damage-clock-negative-result' / 'index.md').read_text()
+        self.assertIn('class="note-hero-visual"', note)
+        self.assertIn('class="note-breadcrumb"', note)
+
     def test_damage_clock_note_exists(self):
         note = ROOT / 'notes' / 'damage-clock-negative-result' / 'index.md'
         self.assertTrue(note.is_file())
