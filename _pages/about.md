@@ -30,24 +30,32 @@ redirect_from:
 
     <ul class="news-list">
       <li>
-        <span class="news-date">2026-06</span>
-        <span class="news-text">On the Scaling of PEFT studies million-scale personal adapters over trillion-parameter shared bases.</span>
+        <span class="news-date">2026-04-30</span>
+        <span class="news-text">AutoQRA was accepted to ICML 2026.</span>
       </li>
       <li>
-        <span class="news-date">2026-05</span>
-        <span class="news-text">MinT is available as a managed infrastructure report for training and serving millions of LoRA-backed LLMs.</span>
+        <span class="news-date">2026-04-04</span>
+        <span class="news-text">Deputy, QR-Adaptor, and CoRE were accepted to ACL 2026.</span>
       </li>
       <li>
-        <span class="news-date">2026-05</span>
-        <span class="news-text">LLM compression with global rank and sparsity optimization, and QR-Adaptor, are available on arXiv.</span>
+        <span class="news-date">2026-01-25</span>
+        <span class="news-text">Large Language Model Compression with Global Rank and Sparsity Optimization was accepted to ICLR 2026.</span>
       </li>
       <li>
-        <span class="news-date">2026-02</span>
-        <span class="news-text">AutoQRA is available on arXiv, covering joint search over quantization bit-width and adapter rank.</span>
+        <span class="news-date">2025-05-01</span>
+        <span class="news-text">BSLoRA was accepted to ICML 2025.</span>
       </li>
       <li>
-        <span class="news-date">2025-02</span>
-        <span class="news-text">Dynamic Operator Optimization for multi-tenant LoRA serving appears at AAAI 2025.</span>
+        <span class="news-date">2025-03-14</span>
+        <span class="news-text">Enhancing Object Coherence in Layout-to-Image Synthesis was accepted to ICME 2025.</span>
+      </li>
+      <li>
+        <span class="news-date">2025-01-22</span>
+        <span class="news-text">RankAdaptor and QPruner were accepted to NAACL 2025.</span>
+      </li>
+      <li>
+        <span class="news-date">2024-12-09</span>
+        <span class="news-text">Dynamic Operator Optimization for Efficient Multi-Tenant LoRA Model Serving was accepted to AAAI 2025.</span>
       </li>
     </ul>
   </section>

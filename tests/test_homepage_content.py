@@ -41,6 +41,29 @@ class HomepageTest(unittest.TestCase):
         self.assertEqual(news_dates, sorted(news_dates, reverse=True))
         self.assertNotIn('2025-12', news_dates)
 
+    def test_news_uses_acceptance_timeline(self):
+        about = (ROOT / '_pages' / 'about.md').read_text()
+        news_items = re.findall(
+            r'<span class="news-date">([^<]+)</span>\s*'
+            r'<span class="news-text">([^<]+)</span>',
+            about,
+        )
+        self.assertEqual(
+            news_items,
+            [
+                ('2026-04-30', 'AutoQRA was accepted to ICML 2026.'),
+                ('2026-04-04', 'Deputy, QR-Adaptor, and CoRE were accepted to ACL 2026.'),
+                ('2026-01-25', 'Large Language Model Compression with Global Rank and Sparsity Optimization was accepted to ICLR 2026.'),
+                ('2025-05-01', 'BSLoRA was accepted to ICML 2025.'),
+                ('2025-03-14', 'Enhancing Object Coherence in Layout-to-Image Synthesis was accepted to ICME 2025.'),
+                ('2025-01-22', 'RankAdaptor and QPruner were accepted to NAACL 2025.'),
+                ('2024-12-09', 'Dynamic Operator Optimization for Efficient Multi-Tenant LoRA Model Serving was accepted to AAAI 2025.'),
+            ],
+        )
+        news_text = ' '.join(text for _, text in news_items)
+        self.assertNotIn('available on arXiv', news_text)
+        self.assertNotIn('studies million-scale', news_text)
+
     def test_previous_landing_page_patterns_removed(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
         self.assertNotIn('profile-hero', about)
